@@ -18,7 +18,7 @@ menu() {
         --text "🤖" \
         msg="________________________________\n"
         msg+="<b>|🧑‍💻 OLA SEJA BEM VINDO(a) 🧑‍💻|</b>\n"
-        msg+="—————————————————––\n|😁Gere seu teste agora mesmo!|\n| ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ    ㅤ |\n| Esse teste será de apenas 1 h   |\n| ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ     |\n| Caso goste compre o acesso    |\n| premium que dura o mês todo. |\n| por apenas 💸15,00😉 ㅤㅤㅤ    |\n—————————————————––\n\nAproveite. 😉 ass: @leandrodts"
+        msg+="—————————————————––\n|😁Gere seu teste agora mesmo!|\n| ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ    ㅤ |\n| Esse teste será de apenas 2 h   |\n| ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ     |\n| Caso goste compre o acesso    |\n| premium que dura o mês todo. |\n| por apenas 💸15,00😉 ㅤㅤㅤ    |\n—————————————————––\n\nAproveite. 😉 ass: @leandrodts"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
@@ -28,7 +28,7 @@ menu() {
 
 # - funcao criar ssh
 criarteste() {
-    [[ $(grep -wc ${callback_query_from_id} lista) != '0' ]] && {
+    [[ $(grep -wc ${callback_query_from_id} lista) != '2' ]] && {
       ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
         --text "😁️ VOCÊ JA CRIOU SEU TESTE HOJE 😁️"
       return 0
@@ -36,7 +36,7 @@ criarteste() {
     usuario=$(echo teste$(( RANDOM% + 99 )))
     senha=$((RANDOM% + 999999))
     limite='2'
-    tempo='1'
+    tempo='2'
     tuserdate=$(date '+%C%y/%m/%d' -d " +1 days")
     useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
