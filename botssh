@@ -61,9 +61,9 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
 #enviar app
 enviarapp() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-        --text "⬇️️ ENVIANDO APLICATIVO, AGUARDE..."
+        --text "⬇️️ BAIXANDO APLICATIVO, AGUARDE..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
-        --document "@/root/MT4G V1.0.2.apk" \
+        --document "@/root/resurrection2.apk" \
     return 0
 
 
@@ -80,11 +80,9 @@ infouser () {
 unset botao1
 botao1=''
 ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text '♻️ GERAR TESTE ♻️' --callback_data 'gerarssh'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 BAIXAR APLICATIVO 🔰' --callback_data 'appenviar'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 COMPRAR LOGIN "PIX"🔰️️'  --callback_data '3' --url ' https://iti.itau/receber/pix/?saleId=24e79232-7b82-40b9-9986-d54c9c157225 '
-ShellBot.InlineKeyboardButton --button 'botao1' --line 6 --text '📃 ENVIAR COMPROVANTE PAGAMENTO 📃' --callback_data '3' --url 'https://wa.me/5527996192080'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 7 --text '🧑‍💻SUPORTE WHATSAPP🧑‍💻️️'  --callback_data '3' --url 'https://wa.me/5527996192080'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 8 --text '👩‍💻 TELEGRAM 🧑‍💻️️'  --callback_data '3' --url 'https://t.me/resurrectionssh'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '🔰 BAIXAR APLICATIVO 🔰' --callback_data 'appenviar'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 COMPRAR LOGIN "PIX"🔰️️'  --callback_data '3' --url ' https://iti.itau/receber/pix/?saleId=24e79232-7b82-40b9-9986-d54c9c157225 '
+ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '📃 ENVIAR COMPROVANTE PAGAMENTO 📃' --callback_data '3' --url 'https://wa.me/5527996192080'
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
 ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
 unset keyboard1
