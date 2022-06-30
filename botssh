@@ -27,7 +27,6 @@ menu() {
 }
 
 # - funcao criar ssh
-criarteste() 
     usuario=$(echo teste$(( RANDOM% + 99 )))
     senha=$((RANDOM% + 999999))
     limite='2'
