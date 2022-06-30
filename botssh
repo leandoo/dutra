@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-#--------@Resurrection SSH-----------#
+#--------@RESURRECTION ssh-----------#
 source ShellBot.sh
 touch lista
 [[ -z $1 ]] && {
@@ -18,7 +18,7 @@ menu() {
         --text "🤖" \
         msg="________________________________\n"
         msg+="<b>|🧑‍💻 OLA SEJA BEM VINDO(a) 🧑‍💻|</b>\n"
-        msg+="—————————————————––\n|😁Gere seu teste agora mesmo!|\n| ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ    ㅤ |\n| Esse teste será de apenas 1 h   |\n| ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ     |\n| Caso goste compre o acesso    |\n| premium que dura o mês todo. |\n| por apenas 💸15,00😉 ㅤㅤㅤ    |\n—————————————————––\n\nAproveite. 😉 ass @leandrodts"
+        msg+="—————————————————––\n|😁Gere seu teste agora mesmo!|\n| ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ    ㅤ |\n| Esse teste será de apenas 1 h   |\n| ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ     |\n| Caso goste compre o acesso    |\n| premium que dura o mês todo. |\n| por apenas 💸15,00😉 ㅤㅤㅤ    |\n—————————————————––\n\nAproveite. 😉 ass: @leandrodts"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
@@ -36,7 +36,7 @@ criarteste() {
     usuario=$(echo teste$(( RANDOM% + 99 )))
     senha=$((RANDOM% + 999999))
     limite='2'
-    tempo='2'
+    tempo='1'
     tuserdate=$(date '+%C%y/%m/%d' -d " +1 days")
     useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
@@ -80,9 +80,9 @@ infouser () {
 unset botao1
 botao1=''
 ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text '♻️ GERAR TESTE ♻️' --callback_data 'gerarssh'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '🔰 BAIXAR APLICATIVO 🔰' --callback_data 'appenviar'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 COMPRAR LOGIN "PIX"🔰️️'  --callback_data '3' --url ' https://iti.itau/receber/pix/?saleId=24e79232-7b82-40b9-9986-d54c9c157225 '
-ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '📃 ENVIAR COMPROVANTE PAGAMENTO 📃' --callback_data '3' --url 'https://wa.me/5527996192080'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 BAIXAR APLICATIVO 🔰' --callback_data 'appenviar'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 COMPRAR LOGIN PIX 🔰️️'  --callback_data '3' --url 'https://iti.itau/receber/pix/?saleId=24e79232-7b82-40b9-9986-d54c9c157225'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 7 --text '🧑‍💻 ENVIAR COMPROVANTE 🧑‍💻️️'  --callback_data '3' --url 'https://wa.me/5527996192080'
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
 ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
 unset keyboard1
