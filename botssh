@@ -7,7 +7,7 @@ touch lista
     clear && echo "INFORME O TOKEN DO BOT" && return 0
 }
 [[ ! -e RESET ]] && touch RESET
-api_bot=$1
+api_bot=$0
 ShellBot.init --token "$api_bot" --monitor --flush
 ShellBot.username
 
@@ -27,7 +27,13 @@ menu() {
 }
 
 # - funcao criar ssh
-    usuario=$(echo teste$(( RANDOM% + 99 )))
+criarteste() {
+    [[ $(grep -wc ${callback_query_from_id} lista) != '0' ]] && {
+      ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
+        --text "😁️ VOCÊ JA CRIOU SEU TESTE HOJE 😁️"
+      return 0
+    }
+    usuario=$(echo teste$(( RANDOM% + 9999 )))
     senha=$((RANDOM% + 999999))
     limite='2'
     tempo='2'
