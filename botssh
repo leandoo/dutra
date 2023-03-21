@@ -18,13 +18,16 @@ menu()
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         msg+="<b>💰COMPRE SEU 30 DIAS POR APENAS 15 R$💰</b>\n"
         msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        msg+="CHAMA NO WHATSAPP: 027 99506-8138 OU TELEGRAM: @leandrodts"
+        msg+="<p>COMPRE PELO
+<a href="https://wa.me/5527995068138">WHATSAPP</a></p>
+"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
         --parse_mode html
         return 0
 }
+
 
 # - funcao criar ssh
 criarteste() {
