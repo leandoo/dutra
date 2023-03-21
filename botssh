@@ -12,7 +12,8 @@ ShellBot.init --token "$api_bot" --monitor --flush
 ShellBot.username
 
 # - Funcao menu
-menu() {
+menu() 
+ {
     local msg
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         msg+="<b>🤖 OLA SEJA BEM VINDO(a) 🤖</b>\n"
@@ -25,12 +26,11 @@ menu() {
         return 0
 }
 
-# - Funcao menu
-menu() {
+{
     local msg
-        msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
+        msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         msg+="<b>💰COMPRE SEU 30 DIAS POR APENAS 15 R$💰</b>\n"
-        msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
+        msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         msg+="CHAMA NO WHATSAPP: 027 99506-8138 OU TELEGRAM: @leandrodts"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
