@@ -24,8 +24,7 @@ menu()
         --reply_markup "$keyboard1" \
         --parse_mode html
         return 0
-},
-{
+
     local msg
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         msg+="<b>💰COMPRE SEU 30 DIAS POR APENAS 15 R$💰</b>\n"
