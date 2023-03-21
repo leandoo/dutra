@@ -14,13 +14,24 @@ ShellBot.username
 # - Funcao menu
 menu() {
     local msg
-    msg="=×<b>🔰❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️🔰</b>\n"
-        msg="=×<b>🤖 OLA SEJA BEM VINDO(a) 🤖</b>\n"
-        msg+="<b>COMPRE 30 DIAS DE INTERNET ILIMITADA</b>\n"
-        msg+="POR APENAS 15 REAIS MENSAIS\n\n"
-        msg+="FAÇA SEU TESTE GRATUITO!!"
-        msg="=PARA COMPRAR BASTA CHAMAR @leandrodts NO PRIVADO  PARA ADQUIRIR SEU LOGIN😄"
-        msg="=×<b>🔰❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️❎️🔰</b>\n"
+        msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
+        msg+="<b>🤖 OLA SEJA BEM VINDO(a) 🤖</b>\n"
+        msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
+        msg+="Gere seu teste agora mesmo!"
+        ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
+        --text "$(echo -e $msg)" \
+        --reply_markup "$keyboard1" \
+        --parse_mode html
+        return 0
+}
+
+# - Funcao menu
+menu() {
+    local msg
+        msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
+        msg+="<b>💰COMPRE SEU 30 DIAS POR APENAS 15 R$💰</b>\n"
+        msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
+        msg+="CHAMA NO WHATSAPP: 027 99506-8138 OU TELEGRAM: @leandrodts"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
@@ -32,7 +43,7 @@ menu() {
 criarteste() {
     [[ $(grep -wc ${callback_query_from_id} lista) != '0' ]] && {
       ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-        --text "⚠️ POXA! VOCÊ JA FEZ SEU TESTE DE HOJE. VOLTE AMANHÃ E PEGUE UM NOVO TESTE, OU CHAMA NO WHATSAPP PARA ADQUIRIR UM LOGIN PERMANENTE. WHATSAPP:  (27) 99506-8138 ou no telegram👉 @leandrodts⚠️"
+        --text "🔰 POXA! VOCÊ JA FEZ SEU TESTE DE HOJE. VOLTE AMANHÃ E PEGUE UM NOVO TESTE, OU CHAMA NO WHATSAPP PARA ADQUIRIR UM LOGIN PERMANENTE. WHATSAPP:  (27) 99506-8138 ou no telegram👉 @leandrodts 🔰"
       return 0
     }
     usuario=$(echo teste$(( RANDOM% + 999 )))
