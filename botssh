@@ -19,8 +19,7 @@ menu()
         msg+="<b>💰COMPRE SEU 30 DIAS POR APENAS 15 R$💰</b>\n"
         msg+="🔰×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×🔰\n\n"
         msg+="<b>COMPRE PELO
-<a href="https://wa.me/5527995068138">WHATSAPP</a></b>
-"
+<a href="https://wa.me/5527995068138">WHATSAPP</a></b>"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
