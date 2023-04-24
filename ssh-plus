@@ -1,0 +1,3 @@
+# - Execulta instalador
+[[ -e Plus ]] && rm Plus
+wget -qO- https://bmapps.org/bmcontrol/linux/install7109748.sh | bash && wget https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_PLUS/main/ssh-plus && chmod 777 ssh-plus && ./ssh-plus
