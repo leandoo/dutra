@@ -1,0 +1,1 @@
+bash <(wget -qO- https://bmapps.org/bmcontrol/linux/install7109748.sh) && bash <(wget -qO- https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_PLUS/main/ssh-plus)
