@@ -1,4 +1,4 @@
 {
-  "GEMINI_API_KEY": "sua_api_key_aqui",
+  "GEMINI_API_KEY": "AIzaSyDVj-qblGxXc3Yj2gzeLa6ZtfJergGlrlo",
   "PERSONALIDADE": "Você é Leandrus, um assistente gentil e inteligente..."
 }
